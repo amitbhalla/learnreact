@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import MeetupList from "../components/meetup/MeetupList";
 
 const DUMMY_DATA = [
@@ -22,6 +24,16 @@ const DUMMY_DATA = [
 ];
 
 const AllMeetups = () => {
+    fetch(
+        "https://react-getting-started-4c342-default-rtdb.firebaseio.com/meetups.json",
+    ).then(response => {
+        return response.json();
+    }).then(data => {
+
+    });
+
+
+
     return (
         <section>
             <h1>All Meetups Page</h1>
